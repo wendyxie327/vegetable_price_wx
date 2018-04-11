@@ -1,5 +1,4 @@
 /* pages/main/main.wxss */
-@import "../lib/weui.wxss";
 .page-section{
   margin-bottom: 20rpx;
 }
@@ -8,6 +7,18 @@
   background-color: white;
   margin: 10px 10px 10px 10px;
   padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction:row;
+}
+
+
+.content{
+  background-color: white;
+  margin: 10px 10px 10px 10px;
+}
+
+
+.view_row{
   display: flex;
   flex-direction:row;
 }

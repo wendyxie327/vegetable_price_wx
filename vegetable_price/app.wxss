@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import 'pages/lib/weui.wxss';
+
 page {
   background-color: #F8F8F8;
   height: 100%;
@@ -6,3 +8,6 @@ page {
   line-height: 1.6;
 }
 
+.error_content {
+  text-align:center
+}

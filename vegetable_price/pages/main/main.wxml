@@ -1,8 +1,20 @@
 <view class="container">
   <view>
     <view class="input_container">
-      <input class="input_common" auto-focus placeholder="将会获取焦点dddddddddddddddddddddddddddddddddddddddddddddddddd"  />
+      <input class="input_common" auto-focus placeholder="查询菜名" bindinput='searchInputListener' />
       <icon class="input_icon" type='search'></icon>
     </view>
   </view>
+
+  <view class="content weui-cells"  hidden='{{!errorContentHide}}'>
+    <block wx:for="{{goodsListShow}}" wx:key="goods">
+      <view class='weui-cell'>
+        <view class='weui-cell__bd'>{{item.goods.name}}</view>
+        <view class='weui-cell__ft'>{{item.price.price}} 元/{{item.goods.unit}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='error_content' hidden='{{errorContentHide}}'>{{errorMessage}}</view>
+
 </view>
