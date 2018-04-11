@@ -10,7 +10,9 @@ Page({
     ],
     goodsListShow: [],
     errorMessage: "暂无数据",
-    errorContentHide: true
+    errorContentHide: true,
+    inputShowed: false,
+    inputVal: ""
   },
   /**
    * 设置Data中的goodsList数据
@@ -43,7 +45,35 @@ Page({
     this.setGoodsListData(goodss, "请换个条件试试");
   },
 
+  //事件处理函数
+  showDetailView: function () {
+    wx.navigateTo({
+      url: '../detail/chart/chart'
+    })
+  },
 
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: "",
+    });
+    this.setGoodsListData(this.data.goodsList);
+  },
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载

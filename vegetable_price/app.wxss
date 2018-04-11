@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import 'pages/lib/weui.wxss';
+@import '/lib/weui.wxss';
 
 page {
   background-color: #F8F8F8;
@@ -9,5 +9,5 @@ page {
 }
 
 .error_content {
-  text-align:center
+  background-color: transparent
 }
